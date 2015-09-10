@@ -38,6 +38,17 @@
 
 \renewcommand{\familydefault}{\sfdefault}
 
+\makeatletter
+\renewcommand{\@seccntformat}[1]
+	{\ifcsname prefix@#1\endcsname
+		\csname prefix@#1\endcsname
+	\else
+		\csname the#1\endcsname\quad
+	\fi}
+\newcommand\prefix@section{}
+\newcommand\prefix@subsection{}
+\makeatother
+
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -59,17 +70,17 @@
 	\faEnvelopeO\ \href{mailto:root@rolisoft.net}{\color{DarkGray} root@rolisoft.net}}
 	\end{center}
 
-\section*{Objective}
+\section{Objective}
 	Seeking a position to utilize my skills and abilities in the \textbf{Information Technology} and \textbf{Electrical Engineering Industry} that offers professional growth while being \textbf{resourceful}, \textbf{innovative} and \textbf{flexible}.
 
-\section*{Education}
+\section{Education}
 	\begin{itemize}
 	\item	{\large\textbf{B.Sc. Computer Engineering}}\\
 			Sapientia EMTE, Faculty of Technical and Human Sciences, Târgu-Mureș\\
 			\textit{September 2012 – July 2016 (currently attending)}
 	\end{itemize}
 
-\section*{Experience}
+\section{Experience}
 	\begin{itemize}
 	\item	{\large\textbf{BrightAlien Ltd}}\\
 			\textbf{Senior CTO, Part-Time Full-Stack Developer}\\
@@ -81,7 +92,7 @@
 			\textit{July 2014 (one-month internship)}
 	\end{itemize}
 
-\section*{Languages}
+\section{Languages}
 	\begin{itemize}
 		\item	{\large\textbf{English}}: Full professional proficiency
 		\item	{\large\textbf{Hungarian, Romanian}}: Native or bilingual proficiency
@@ -89,9 +100,9 @@
 
 \newpage
 
-\section*{Technical Skills}
+\section{Technical Skills}
 	\begin{itemize}
-	\item	\textbf{11 years} of experience in \textbf{HTML}, \textbf{CSS}, \textbf{JavaScript}, \textbf{PHP} and \textbf{MySQL}.
+	\item	\label{webdev} \pdfbookmark[2]{Web Development}{webdev} \textbf{11 years} of experience in \textbf{HTML}, \textbf{CSS}, \textbf{JavaScript}, \textbf{PHP} and \textbf{MySQL}.
 		\begin{itemize}
 		\item	First exposure to the world of programming via PHP at the age of \textbf{11}.
 		\item	Published first dynamic webpage written from scratch at the age of \textbf{12}.
@@ -111,7 +122,7 @@
 		\item	Intricate knowledge on the \textbf{security} front, and up-to-date on the \textbf{0-day scene}. While programming, I have a \textbf{security- and optimization-focused} mindset. While browsing, I have a tendency to alert server owners of potential exploits on the server. 
 		\item	Currently running \textbf{4 active websites}, with a total of \textbf{20 million page views per month}. The sites were written from scratch by me, and the servers on which they're running on were also configured by me. They are deployed to \textbf{cloud-provider}, namely \textbf{DigitalOcean}, and are being served in a \textbf{load-balanced} and \textbf{dual-stacked environment}, through a $3^{rd}$-party Content Distribution Network, \textbf{CloudFlare}.
 		\end{itemize}
-	\item	\textbf{9 years} of experience in \textbf{.NET}/\textbf{C\#}.
+	\item	\label{softdev} \pdfbookmark[2]{Software Development}{softdev} \textbf{9 years} of experience in \textbf{.NET}/\textbf{C\#}.
 		\begin{itemize}
 		\item	First exposure to object-oriented programming in \textbf{Visual Basic .NET}, then \textbf{C\#}, via the .NET framework at the age of \textbf{13}.
 		\item	Published first \textbf{desktop application}, which implemented an \textit{original idea}, at the age of \textbf{13}, which utilized \textbf{databases}, \textbf{regular expressions}, \textbf{networking} and \textbf{screen-scraping}. Application was published to \textbf{Softpedia}, where it was accepted and reviewed by their staff, leading to a few hundred downloads during its lifetime. 
@@ -127,7 +138,7 @@
 			\end{itemize}
 		\item	Various short-term hobby projects along the time driven by the desire to learn and experiment in various fields, thus expanding my experience and increasing my knowledge of various algorithms, frameworks, and my programming ability as a whole.
 		\end{itemize}
-	\item	\textbf{7 years} of experience in \textbf{Unix-like systems} (\textbf{Linux}, \textbf{BSD})
+	\item	\label{devops} \pdfbookmark[2]{System Administration/DevOps}{devops} \textbf{7 years} of experience in \textbf{Unix-like systems} (\textbf{Linux}, \textbf{BSD})
 		\begin{itemize}
 		\item	Installed first \textbf{Linux distribution} at the age of \textbf{14}.
 		\item	Flashed first router with \textbf{OpenWRT} and \textbf{DD-WRT} at the age of \textbf{15}.
@@ -284,7 +295,7 @@
 				\item	\textbf{NTP}; \textbf{DNS}
 				\end{itemize}
 			\end{itemize}
-		\item	\textbf{Penetration Testing}
+		\item	\label{pentest} \pdfbookmark[2]{Penetration Testing}{pentest} \textbf{Penetration Testing}
 			\begin{itemize}
 			\item	Up-to-date with \textbf{security bulletins}.
 			\item	Knowledge of \textbf{Cross-Site Scripting}, \textbf{SQL Injection}, \textbf{Cross-Site Request Forgery} and similar techniques from a very young age, around \textbf{11} or so.
@@ -344,8 +355,8 @@
 	\item	\textbf{Organizational}/\textbf{Managerial skills} accumulated over time via superfluous scheduling and prioritizing to meet business and educational deadlines.
 	\end{itemize}
 
-\section*{Personal Commercial Projects}
-	\subsection*{RS TV Show Tracker}
+\section{Personal Commercial Projects}
+	\subsection{RS TV Show Tracker}
 
 		An \textbf{open-source} application which was born out of the need for the features it currently offers, as there were no alternative solutions for them at the time. To date, no software has so many features in this category, and as a result, under the four years it's been actively developed, its popularity has grown exponentially. Today, I single-handedly maintain it and push updates to hundreds of thousands of users on a monthly basis.
 		
@@ -353,7 +364,7 @@
 
 		There are, as of writing this in May 2015, \textbf{135,700 active daily users} of the application, with the number of installations reaching into the \textbf{millions}. Development started in \textbf{February 2010}.
 
-	\subsection*{AlienSubtitles.com}
+	\subsection{AlienSubtitles.com}
 
 		\textbf{Full-stack development} of the website and continued maintenance, including initial \textbf{devops responsibilities} (such as cloud server deployment on DigitalOcean) and continued \textbf{proactive monitoring} and administration of the web, database and load-balancer servers.
 
@@ -361,42 +372,42 @@
 
 		At its peak, the site had \textbf{15 million unique users}, who were served by 4 geo-located and load-balanced front-end servers, attaining \textbf{100\% uptime} and \textbf{under 10 millisecond response times} for all users throughout peak times. Development started in \textbf{December 2013}.
 
-\section*{Extracurricular School Projects}
+\section{Extracurricular School Projects}
 	\begin{itemize}
-	\item	\textbf{Streaming and Processing Sensor Data from Android Devices in Realtime} (\textit{Object-Oriented Programming})
+	\item	\label{oop} \pdfbookmark[2]{Streaming and Processing Sensor Data from Android Devices in Realtime}{oop} \textbf{Streaming and Processing Sensor Data from Android Devices in Realtime} (\textit{Object-Oriented Programming})
 		\begin{itemize}
 		\item	This is a two-component application, which when used together can move the mouse on the computer of the user by moving a smartphone in the air.
 		\item	AirMouse-Java-Server: Control the mouse of your PC or laptop by physically moving your phone in the air! Once an Android client connects to this Server, the streamed sensor data will be translated into up-down-left-right movements, which will be reflected upon the mouse on your computer.
 		\item	AirMouse-Android-Client: An Android application, which streams accelerometer and/or gyroscope sensor data to a server application over the Internet or on the local network, where UDP broadcast-based service discovery is available for a faster server listing.
 		\end{itemize}
-	\item	\textbf{On-Demand Task Loader and Executor Unix Daemon} (\textit{Advanced Programming Techniques})
+	\item	\label{apt} \pdfbookmark[2]{On-Demand Task Loader and Executor Unix Daemon}{apt} \textbf{On-Demand Task Loader and Executor Unix Daemon} (\textit{Advanced Programming Techniques})
 		\begin{itemize}
 		\item	Project required the development of a UNIX daemon in C++ which would load and execute dynamically-linked libraries (.so) dropped into its monitored designated directory. It would also stop its execution and unload it if the .so file is removed, and more importantly re-initialize the library and restart the execution if the .so file is modified during its execution.
 		\item	The library file had to be as independent as possible from the daemon application, which was successfully accomplished by giving the daemon application excellent customizability. The library file does not need to link with any component of the daemon.
 		\item	The technologies used in the project included pthreads, inotify and signals.
 		\end{itemize}
-	\item	\textbf{Facebook FQL Query Tool and SQL Schema/Data Exporter} (\textit{Databases})
+	\item	\label{db} \pdfbookmark[2]{Facebook FQL Query Tool and SQL Schema/Data Exporter}{db} \textbf{Facebook FQL Query Tool and SQL Schema/Data Exporter} (\textit{Databases})
 		\begin{itemize}
 		\item	This is a two-part project, which first interfaced with Facebook's FQL API and provided the students with a familiar and easy-to-use interface to test their SQL skills on a real database, consisting of their Facebook data.
 		\item	The second part of the project allows the users to export the data of their query, including an auto-generated schema, so they can import it into their RDBMS of choice and perform further analysis on the data.
 		\end{itemize}
-	\item	\textbf{Network Analysis and Protocol Dissection of Sniffed WiFi Traffic} (\textit{Distributed Networks})
+	\item	\label{net} \pdfbookmark[2]{Network Analysis and Protocol Dissection of Sniffed WiFi Traffic}{net} \textbf{Network Analysis and Protocol Dissection of Sniffed WiFi Traffic} (\textit{Distributed Networks})
 		\begin{itemize}
 		\item	This modular C++ project uses libpcap and the AirPcap Nx USB dongle, which is capable of sniffing the unencrypted traffic of a specified WiFi channel.
 		\item	The raw bytestream captured WiFi traffic is then analyzed using the implemented dissectors, which are modules in the application capable of handling various protocols pertaining to various levels of the OSI layer.
 		\item	The point of this project is educational, to gain insights into the inner workings of various protocols as they are implemented and used on the wire. (Or, in our case, in the air.)
 		\end{itemize}
-	\item	\textbf{An Untitled Minecraft-like 3D Multiplayer Game} (\textit{Software Engineering})
+	\item	\label{seng} \pdfbookmark[2]{An Untitled Minecraft-like 3D Multiplayer Game}{seng} \textbf{An Untitled Minecraft-like 3D Multiplayer Game} (\textit{Software Engineering})
 		\begin{itemize}
 		\item	This project was a special group project, consisting of 5 students, who were required to do the planning, documentation and development of a 3D game (developed in C++ with OpenGL) that allowed players to play a Minecraft-like Creative game session over the internet.
 		\item	My responsibilities were the planning, documentation and development of the networking part of the game, which, besides the protocol and the network API, also included the synchronization of player/map/game states and the insurance of a smooth gameplay. (For example, elimination of the rubber-banding effect to the best of my abilities.)
 		\end{itemize}
-	\item	\textbf{Assembly Compiler for Course-made CPU on FPGA} (\textit{Computer Architecture})
+	\item	\label{arch} \pdfbookmark[2]{Assembly Compiler for Course-made CPU on FPGA}{arch} \textbf{Assembly Compiler for Course-made CPU on FPGA} (\textit{Computer Architecture})
 		\begin{itemize}
 		\item	As part of the Computer Architecture course, a fully working CPU was built from scratch on an FPGA. For testing, we were given .coe files in order to evaluate that our CPU is working properly, and writing an Assembler that would produce these was not part of the course.
 		\item	This project assembles .coe files to be used with Xilinx ISE, out of .asm files which use a custom Intel-like syntax, with added MASM-like syntax sugar, such as \#if, \#while and \#for macros. The assembler was written in C++.
 		\end{itemize}
-	\item	\textbf{Sentimental Analysis of Text on Social WebSites} (\textit{Databases II})
+	\item	\label{db2} \pdfbookmark[2]{Sentimental Analysis of Text on Social WebSites}{db2} \textbf{Sentimental Analysis of Text on Social WebSites} (\textit{Databases II})
 		\begin{itemize}
 		\item	The first stage of the project was for it to be able to determine the positive, negative and objective connotations of a given text and score it on a scale.
 		\item	Further advanced features of the project include the ability to determine the attitude of your friends from social sites (Facebook, Twitter) towards a given item/product.
