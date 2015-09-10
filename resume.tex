@@ -1,0 +1,88 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle[shortrules]{banking}
+\moderncvcolor{blue}
+
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75]{geometry}
+
+% create new hlink command; this is needed, since \httplink only supports http:// links.
+% also overwrite \httplink to point to HTTPS addresses.
+\makeatletter
+\newcommand*{\hlink}[2][]{%
+	\ifthenelse{\equal{#1}{}}%
+	{\href{#2}{#2}}%
+	{\href{#2}{#1}}}
+\renewcommand*{\httplink}[2][]{%
+	\ifthenelse{\equal{#1}{}}%
+	{\href{https://#2}{#2}}%
+	{\href{https://#2}{#1}}}
+\makeatother
+
+% redefine social region to support skype.
+\makeatletter
+\newcommand*{\skypesocialsymbol}{\faSkype~}
+\RenewDocumentCommand{\social}{O{}O{}m}{%
+	\ifthenelse{\equal{#2}{}}%
+    {%
+    	\ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httplink[#3]{www.linkedin.com/in/#3}}}{}%
+    	\ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} {\protect\httplink[#3]{www.twitter.com/#3}}}    {}%
+    	\ifthenelse{\equal{#1}{facebook}}{\collectionadd[facebook]{socials}{\protect\httplink[#3]{www.facebook.com/#3}}}   {}%
+    	\ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  {\protect\httplink[#3]{github.com/#3}}}     {}%
+    	\ifthenelse{\equal{#1}{skype}}   {\collectionadd[skype]{socials}   {\protect\hlink[#3]{skype:#3}}}              {}%
+    }
+    {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
+\makeatother
+
+\name{Roland}{Bogosi}
+\title{Résumé}
+\address{Unit 7537, PO Box 6945, London}{W1A 6US}{UK}
+\phone[fixed]{+44~20~3411~1758}
+\phone[fixed]{+1~224~366~7654}
+\email{root@rolisoft.net}
+\homepage{rolisoft.net}
+\social[linkedin]{RolandBogosi}
+\social[skype]{RoliSoft}
+\social[github]{RoliSoft}
+\quote{"Knowing is not enough; we must apply. Willing is not enough; we must do." - Johann Wolfgang von Goethe}
+
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\begin{document}
+\makecvtitle
+
+\section{Education}
+
+	\cventry{2012--2016}{B.Sc. Computer Engineering}{Sapientia EMTE, Faculty of Technical and Human Sciences}{Târgu-Mureş}{}{Gave multiple presentations in various fields; attended the XVI. Scientific Student Conference with a project which won a special award; participated in a research group studying sentiment analysis as an extracurricular activity; doing thesis in the field of Information Security.}
+
+\section{Experience}
+
+	\cventry{July 2014--August 2014}{Android Developer Internship}{Lynx Solutions SRL}{Târgu-Mureş}{}{Job responsibilities included the creation of a 30-page document describing the application to be developed and its specifications; the single-handed development of the documented Android-based application with UI accommodating both smartphones and tablets alike (through the use of fragments and multiple layouts with constraints); overseeing fellow interns through their journey of implementing the documented REST API.}
+	
+	\cventry{December 2013--Present}{Senior CTO, Part-Time Full-Stack Developer}{BrightAlien Ltd}{London (Remote)}{}{Job responsibilities include the full-stack development of 9 websites plus an internal dashboard; the installation with continued proactive monitoring and administration of 4 *nix-based and 1 Windows-based production servers; miscellaneous devops responsibilities.}
+
+\section{Languages}
+
+	\cvitem{English}{Full professional proficiency}
+	\cvitem{Hungarian, Romanian}{Native or bilingual proficiency}
+
+\section{Technical Skills}
+	\subsection{Proficient with}
+	
+		\cvline{Languages}{C/C++, C\#, Java, VHDL, PHP, JavaScript, Python, SQL, HTML, CSS}
+		\cvline{Libraries}{STL, Boost, Qt, MFC, Swing, NUnit, jQuery, Bootstrap, Angular.js, PHPUnit, PayPal IPN, Bitcoin RPC...}
+		\cvline{Technologies}{Debian, CentOS, BSD, nginx, Apache, HHVM, exim, Postfix, Redis, memcached, ElasticSearch, Sphinx, MySQL/MariaDB, SQLite, Oracle, SOAP, JSON, Google ProtoBuf, XDebug, OpenVPN, L2TP/IPSec, Radius/LDAP, Tor/I2P, Meshnets, Google AppEngine, Amazon AWS/Linode/DigitalOcean, CloudFlare/Incapsula, NSIS, InnoSetup, WiX, MSTest, dotCover, dotMemory, dotTrace...}
+		\cvline{Fields}{Penetration testing, Reverse engineering, System administration, Shell programming, Task automation, High availability (Load-balancing, TTFB optimization, ...), Software performance, Server/software security, Data encryption, Networking, Screen scraping, Testing, Search engine optimization (SEO), Continuous Integration}
+		
+	\subsection{Exposure to}
+	
+		\cvline{Languages}{Matlab, Ruby, PowerShell}
+		\cvline{Technologies}{OpenCL, Cuda, Android, PostgreSQL, Microsoft SQL Server, MongoDB, CouchDB}
+		\cvline{Fields}{Massively parallel systems, Neural networks, Recommendations systems, Mobile development}
+
+\section{Interests}
+	\textbf{Self-teaching} is an important part of my lifestyle. I try to keep up with the ever-evolving technologies of today. I constantly \textbf{try out new languages}, \textbf{new technologies} and \textbf{new practices}. I constantly go back and \textbf{re-do old projects}, with a twist, and I challenge myself to do it much better this time, by setting much higher goals. I read \textbf{research papers}, \textbf{0-day bulletins} and other sources of information that let me be ahead of the competition. I am not afraid to take initiative, and to color outside of the lines. I don't mind to get my hands dirty to try something out, let it be DoS-ing my own server in order to try out if an optimization technique or security practice did indeed work. I also watch \textbf{conference videos} (such as \textbf{DefCon}, \textbf{Black Hat}, etc) and \textbf{tech-talks} (such as \textbf{Microsoft's GoingNative}, and much more) in order to get an edge in their specific fields.
+	\\\\
+	{\color{color2} A more detailed description of my technical skills and projects is available in my curriculum vitæ, which can be downloaded from}
+	{\color{color1} \url{https://rolisoft.net/cv.pdf}}
+	
+\end{document}
