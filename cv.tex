@@ -7,6 +7,7 @@
 \usepackage{fancyhdr}
 \usepackage{indentfirst}
 \usepackage{fontawesome}
+\usepackage{graphicx}
 
 \usepackage{hyperref}
 \hypersetup{pdfborder={0 0 0}}
@@ -18,7 +19,7 @@
 \definecolor{DarkGreen}{rgb}{0.35,0.70,0.30}
 
 \usepackage{sectsty}
-\sectionfont{\color{LightBlue}}
+\sectionfont{\raggedright\color{LightBlue}\sectionrule{0pt}{0pt}{-5pt}{0.4pt}}
 \subsectionfont{\color{DarkGreen}}
 
 \usepackage{enumitem}
@@ -33,8 +34,6 @@
 \setlist[itemize,8]{label=\large{$\circ$}}
 \setlist[itemize,9]{label=\tiny{$\blacksquare$}}
 \renewlist{itemize}{itemize}{9}
-
-\usepackage[letterspace=150]{microtype}
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -56,18 +55,26 @@
 %\overfullrule=1mm
 
 \author{Roland Bogosi}
-\title{Curriculum Vitae}
+\title{Curriculum Vit\ae}
 
 \begin{document}
 
 	\begin{center}
-	\textsc{\Huge Roland Bogosi}\\
-	\vspace{-2mm}
-	\rule{300pt\color{LightGray}}{0.5px}\\
-	\vspace{0.5mm}
-	{\lsstyle\color{DarkGray} \faGlobe\ Unit 7537, PO Box 6945, London, W1A 6US, UK\\
-	\faPhone\ \href{tel:+442034111758}{\color{DarkGray} +44 20 3411 1758} {\color{LightGray}$\bullet$} \faPhone\ \href{tel:+12243667654}{\color{DarkGray} +1 224 366 7654}\\
-	\faEnvelopeO\ \href{mailto:root@rolisoft.net}{\color{DarkGray} root@rolisoft.net}}
+	{\Huge\textbf{\color{LightBlue} Roland Bogosi}{\color{Gray}\hspace{7pt}\textbar\hspace{4pt}{\scalebox{.9}[1.0]{Curriculum Vit\ae}}}}
+	\vspace{15pt}
+	
+	{\color{DarkGray}
+		\faHome\ Unit 7537, PO Box 6945, London, W1A 6US, UK\\
+		
+		\faPhone\ \href{tel:+442034111758}{\color{DarkGray} +44 20 3411 1758} \hspace{4pt}{\color{Gray}$\bullet$}\hspace{4pt}
+		\faPhone\ \href{tel:+12243667654}{\color{DarkGray} +1 224 366 7654} \hspace{4pt}{\color{Gray}$\bullet$}\hspace{4pt}
+		\faEnvelopeO\ \href{mailto:root@rolisoft.net}{\color{DarkGray} root@rolisoft.net}\\
+		
+		\faGlobe\ \href{https://rolisoft.net/}{\color{DarkGray} rolisoft.net} \hspace{3pt}{\color{Gray}$\bullet$}\hspace{4pt}
+		\faLinkedin\ \href{https://www.linkedin.com/in/RolandBogosi}{\color{DarkGray} RolandBogosi} \hspace{3pt}{\color{Gray}$\bullet$}\hspace{4pt}
+		\faSkype\ \href{skype:RoliSoft}{\color{DarkGray} RoliSoft} \hspace{3pt}{\color{Gray}$\bullet$}\hspace{4pt}
+		\faGithub\ \href{https://github.com/RoliSoft}{\color{DarkGray} RoliSoft}
+	}
 	\end{center}
 
 \section{Objective}
