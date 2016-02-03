@@ -1,4 +1,5 @@
 *.pdf
+/info_ro.tex
 
 ### LaTeX ###
 *.acn

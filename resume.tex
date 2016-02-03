@@ -5,6 +5,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.75]{geometry}
+\usepackage{combelow}
 
 % create new hlink command; this is needed, since \httplink only supports http:// links.
 % also overwrite \httplink to point to HTTPS addresses.
@@ -36,9 +37,6 @@
 
 \name{Roland}{Bogosi}
 \title{Résumé}
-\address{Unit 7537, PO Box 6945, London}{W1A 6US}{UK}
-\phone[fixed]{+44~20~3411~1758}
-\phone[fixed]{+1~224~366~7654}
 \email{root@rolisoft.net}
 \homepage{rolisoft.net}
 \social[linkedin]{RolandBogosi}
@@ -46,19 +44,21 @@
 \social[github]{RoliSoft}
 \quote{"Knowing is not enough; we must apply. Willing is not enough; we must do." - Johann Wolfgang von Goethe}
 
+\input{info_intl.tex}
+
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 \begin{document}
 \makecvtitle
 
 \section{Education}
 
-	\cventry{September 2012--July 2016}{B.Sc. Computer Engineering}{Sapientia EMTE, Faculty of Technical and Human Sciences}{Târgu-Mureş}{}{Gave multiple presentations in various fields; attended the XVI. Scientific Student Conference with a project which won a special award; participated in a research group studying sentiment analysis as an extracurricular activity; doing thesis in the field of Information Security.}
+	\cventry{September 2012--July 2016}{B.Sc. Computer Engineering}{Sapientia EMTE, Faculty of Technical and Human Sciences}{Târgu-Mure\cb{s}}{}{Gave multiple presentations in various fields; attended the XVI. Scientific Student Conference with a project which won a special award; participated in a research group studying sentiment analysis as an extracurricular activity; doing thesis in the field of Information Security.}
 
 \section{Experience}
 	
 	\cventry{December 2013--December 2015}{DevOps Engineer and Full-Stack Developer}{BrightAlien Ltd}{London (Remote)}{}{Job responsibilities include the full-stack development of 9 websites plus an internal dashboard; the installation with continued proactive monitoring and administration of 4 *nix-based and 1 Windows-based production servers; miscellaneous DevOps responsibilities.}
 
-	\cventry{July 2014--August 2014}{Android Developer Internship}{Lynx Solutions SRL}{Târgu-Mureş}{}{Job responsibilities included the creation of a 30-page document describing the application to be developed and its specifications; the single-handed development of the documented Android-based application with UI accommodating both smartphones and tablets alike (through the use of fragments and multiple layouts with constraints); overseeing fellow interns through their journey of implementing the documented REST API.}
+	\cventry{July 2014--August 2014}{Android Developer Internship}{Lynx Solutions SRL}{Târgu-Mure\cb{s}}{}{Job responsibilities included the creation of a 30-page document describing the application to be developed and its specifications; the single-handed development of the documented Android-based application with UI accommodating both smartphones and tablets alike (through the use of fragments and multiple layouts with constraints); overseeing fellow interns through their journey of implementing the documented REST API.}
 
 \section{Certifications}
 
