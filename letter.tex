@@ -1,0 +1,84 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+\moderncvstyle[shortrules]{banking}
+\moderncvcolor{blue}
+
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.8]{geometry}
+\usepackage{combelow}
+
+% create new hlink command; this is needed, since \httplink only supports http:// links.
+% also overwrite \httplink to point to HTTPS addresses.
+\makeatletter
+\newcommand*{\hlink}[2][]{%
+	\ifthenelse{\equal{#1}{}}%
+	{\href{#2}{#2}}%
+	{\href{#2}{#1}}}
+\renewcommand*{\httplink}[2][]{%
+	\ifthenelse{\equal{#1}{}}%
+	{\href{https://#2}{#2}}%
+	{\href{https://#2}{#1}}}
+\makeatother
+
+% redefine social region to support skype.
+\makeatletter
+\newcommand*{\skypesocialsymbol}{\faSkype~}
+\RenewDocumentCommand{\social}{O{}O{}m}{%
+	\ifthenelse{\equal{#2}{}}%
+    {%
+    	\ifthenelse{\equal{#1}{linkedin}}{\collectionadd[linkedin]{socials}{\protect\httplink[#3]{www.linkedin.com/in/#3}}}{}%
+    	\ifthenelse{\equal{#1}{twitter}} {\collectionadd[twitter]{socials} {\protect\httplink[#3]{www.twitter.com/#3}}}    {}%
+    	\ifthenelse{\equal{#1}{facebook}}{\collectionadd[facebook]{socials}{\protect\httplink[#3]{www.facebook.com/#3}}}   {}%
+    	\ifthenelse{\equal{#1}{github}}  {\collectionadd[github]{socials}  {\protect\httplink[#3]{github.com/#3}}}     {}%
+    	\ifthenelse{\equal{#1}{skype}}   {\collectionadd[skype]{socials}   {\protect\hlink[#3]{skype:#3}}}              {}%
+    }
+    {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
+\makeatother
+
+\name{Roland}{Bogosi}
+\title{Cover Letter}
+\email{root@rolisoft.net}
+\homepage{rolisoft.net}
+\social[linkedin]{RolandBogosi}
+\social[skype]{RoliSoft}
+\social[github]{RoliSoft}
+
+\input{info_ro.tex}
+
+\begin{document}
+\recipient{Lateral Inc.}{Tamás Ernő 1\\540164, Târgu Mureș}
+\date{August 24, 2016}
+\opening{Dear Sir or Madam,}
+\closing{Yours faithfully,}
+\enclosure[Attached]{Curriculum Vit\ae{}}
+\makelettertitle
+
+\setlength{\parindent}{3ex}
+
+I would like to express my interest in the open position for a senior .NET engineer. As a C\# developer with over 10 years of experience in its various technologies on the desktop and web, I feel like I would be a valuable addition to your team. Some of the projects I developed using said technologies enjoy great popularity and are praised by their users.
+
+I got access to a personal computer at the very young age of 10, and started programming out of personal initiative at the age of 11. My first desktop .NET application was published on Softpedia at the age of 13, and I later received my first paycheck from Google AdSense at the age of 14 for the ad revenues from my personal projects. Since then, I have taken every opportunity to better myself further, learn newer and better technologies, and to keep up-to-date with those that I already have experience with.
+
+I freshly graduated B.Sc. Computer Engineering with honors at Sapientia EMTE this summer, where I received a grade of 10 on my thesis in information security. I am by nature a curious tinkerer and not afraid to learn new languages, technologies and tackle challenging problems with them, a statement upheld by the fact that I am part of two research groups and have been published already.
+
+When writing code, I aim for simplicity, code-maintainability, optimization and security. Besides having a self-documenting coding style, I also document my code. I am used to working in teams, and have used distributed version-control and continuous integration systems extensively during my projects.
+
+I welcome the opportunity to discuss with you personally about what I could bring to the company.
+
+\setlength{\parindent}{0ex}
+\vspace{2ex}
+
+%\makeletterclosing
+
+Yours faithfully,
+
+\vspace{3ex}
+\includegraphics[scale=0.3]{signature.png}
+
+\vfil
+{\color{color2}\itshape Attached: Curriculum Vit\ae{}}
+
+\end{document}
+
+
+%% end of file `template.tex'.
