@@ -35,6 +35,11 @@
     {\collectionadd[#1]{socials}{\protect\httplink[#3]{#2}}}}
 \makeatother
 
+\makeatletter\newcommand\myname{\@firstname~\@lastname}\makeatother
+\makeatletter\newcommand\myphone{\@phone}\makeatother
+\makeatletter\newcommand\myemail{\@email}\makeatother
+\makeatletter\newcommand\myhomepage{\@homepage}\makeatother
+
 \name{Roland}{Bogosi}
 \title{Curriculum Vit\ae}
 \email{roland@rolisoft.net}
@@ -100,6 +105,11 @@
 
 	\cvitemwithcomment{}{\textbf{XIV. Scientific Students' Associations Conference Award}}{April 2015}
 	\vspace{-2pt} {\small{Sponsors' choice prize for the "Sentiment Analysis of Social Networks" research.}}
+
+
+\fancyhead[C]{\textcolor{color2}{\LARGE \textbf{\myname} | CV}}
+\fancyfoot[L]{\textcolor{color2}{\phonesymbol \myphone {~~~{\rmfamily\textbullet}~~~} \emailsymbol\emaillink{\myemail} {~~~{\rmfamily\textbullet}~~~} \homepagesymbol\httplink{\myhomepage}}}
+
 
 \section{Languages}
 
